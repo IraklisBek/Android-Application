@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/blue">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_text_post_pop_up"
+    tools:context="com.example.irakl_000.maps.posts.PostPopUp"
+    android:id="@+id/ee"
+    android:orientation="horizontal">
+    <!--<EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:singleLine="true"
+        android:inputType="text" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/picName">
+        <com.facebook.login.widget.ProfilePictureView
+        android:id="@+id/picTextPost"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        />
+
+        <!--<Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Iraklis Bekiaris"
+            android:gravity="center"
+            android:id="@+id/textPostUsername"
+            android:layout_marginTop="5dp"
+            />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/follow"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textPostUsername"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/textPostLine1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/picName"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Place"
+        android:id="@+id/placeDet"
+        android:layout_below="@+id/textPostLine1"
+        android:layout_alignParentStart="true" />
+    <View
+        android:id="@+id/textPostLine1.5"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ffffff"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/textPostLine1"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textPostTitle"
+        android:text="Title"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textPostLine1.5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textPostPost"
+        android:text="Post"
+        android:layout_below="@+id/textPostTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <View
+        android:id="@+id/textPostLine2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textPostPost"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favorited"
+        android:onClick="rateOne"
+        android:id="@+id/favorited1"
+        android:layout_below="@+id/textPostLine2"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favorited"
+        android:onClick="rateTwo"
+        android:id="@+id/favorited2"
+        android:layout_below="@+id/textPostLine2"
+        android:layout_toEndOf="@+id/favorited1"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favorited"
+        android:onClick="rateThree"
+        android:id="@+id/favorited3"
+        android:layout_alignTop="@+id/textPostLine2"
+        android:layout_toEndOf="@+id/favorited2"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favorited"
+        android:onClick="rateFour"
+        android:id="@+id/favorited4"
+        android:layout_alignTop="@+id/textPostLine2"
+        android:layout_toEndOf="@+id/favorited3"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favorited"
+        android:onClick="rateFive"
+        android:id="@+id/favorited5"
+        android:layout_below="@+id/textPostLine2"
+        android:layout_toEndOf="@+id/favorited4"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

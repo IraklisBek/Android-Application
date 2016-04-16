@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView02"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/blue">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/blue"
+    tools:showIn="@layout/activity_text_post" tools:context="com.example.irakl_000.maps.posts.Post">
+
+
+    <!--<EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTitle"
+        android:background="@drawable/edit_text"
+        android:hint="Title"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textColor="#000"
+        android:gravity="center_horizontal"
+        />-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/textPost"
+        android:gravity="top"
+        android:paddingStart="72dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text"
+        android:hint="Post it ;d"
+        android:cursorVisible="false"
+        android:layout_below="@+id/eventKind"
+        android:layout_alignParentEnd="true"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text"
+        android:layout_below="@+id/textPost"
+        android:id="@+id/dummyText2"
+        android:layout_marginTop="-1dp"
+        android:focusableInTouchMode="true"
+        />
+
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/textPic"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textPost"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/sendTextPost"
+        android:padding="0dp"
+        android:layout_margin="6dp"
+        android:src="@drawable/textpost"
+        android:layout_alignBottom="@+id/dummyText2"
+        android:layout_alignEnd="@+id/dummyText2"
+        android:onClick="gotoMapsActivity"/>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/sendTextPost"
+            android:layout_centerHorizontal="true" />
+    <Spinner
+        android:drawSelectorOnTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventKind"
+        android:layout_marginTop="6dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:entries="@array/kind_arrays"
+        android:prompt="@string/kind_prompt"
+        android:layout_alignParentEnd="false"
+        android:background="#ffffff"
+        android:spinnerMode="dropdown"
+        android:layout_alignParentStart="true" />
+
+    <!--<ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_toRightOf="@+id/image"
+        android:padding="3dip"
+        android:layout_marginTop="2dip"
+        android:textColor="@drawable/red"
+        android:textStyle="bold"
+        android:id="@+id/company"
+        android:layout_marginLeft="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_toRightOf="@+id/image"
+        android:padding="2dip"
+        android:textColor="@drawable/darkgrey"
+        android:layout_marginLeft="5dip"
+        android:id="@+id/sub"
+        android:layout_below="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>-->
+    <TextView
+        android:paddingTop="20dip"
+        android:paddingLeft="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/output"
+        />
+</RelativeLayout>
+</ScrollView>

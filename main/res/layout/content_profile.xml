@@ -1,0 +1,486 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Profile Settings"
+            android:id="@+id/settingsTitle"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            />
+        <View
+            android:id="@+id/lineKindsTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/settingsTitle"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/profileRedLine"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:text="Kinds of post you want to see"
+            android:id="@+id/postKinds"
+            android:textSize="20dp"
+            android:layout_below="@+id/lineKindsTitle"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blue"
+            android:background="#ffffff"/>
+        <LinearLayout
+            android:layout_below="@+id/postKinds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear1"
+            android:paddingLeft="16dp"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:id="@+id/musicOption"
+
+                android:checked="true"
+                android:textColor="#ffffff"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Concert"
+                android:id="@+id/concertOption"
+                android:checked="true"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Party"
+                android:id="@+id/partyOption"
+                android:checked="true"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear11"
+            android:layout_below="@+id/linear1">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/musicOptionIcon"
+                android:src="@drawable/musicicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/concertOptionIcon"
+                android:src="@drawable/concerticon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/partyOptionIcon"
+                android:src="@drawable/partyicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/linear11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear2"
+            android:paddingLeft="16dp">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:id="@+id/sportsOption"
+                android:checked="true"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MeetUps"
+                android:id="@+id/meetUpsOption"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinema"
+                android:id="@+id/cinemaOption"
+                android:checked="true"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:text="Posts ratio view"
+            android:textColor="@color/blue"
+            android:id="@+id/ratioTitle"
+            android:textSize="20dp"
+            android:layout_below="@+id/lineRec"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear22"
+            android:layout_below="@+id/linear2">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/sportscOptionIcon"
+                android:src="@drawable/sportsicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/meetUpsOptionIcon"
+                android:src="@drawable/meetupicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cinemaOptionIcon"
+                android:src="@drawable/movieicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:max="1000"
+            android:progressDrawable="@drawable/seek_two"
+            android:thumb="@drawable/seek_one"
+            android:layout_below="@+id/ratioTitle"
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="Ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seekBar1"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="14dp" />
+
+
+        <View
+            android:id="@+id/lineRatio"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/profileRedLine"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/linear33"
+            android:layout_alignParentStart="true" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended posts"
+            android:id="@+id/recommendedBox"
+            android:checked="false"
+            android:layout_below="@+id/lineRatio"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"
+            android:paddingLeft="6dp"
+            android:button="@drawable/checkbox"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/RecOptionIcon"
+            android:src="@drawable/recommendicon"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/recommendedBox"
+            android:layout_centerHorizontal="true" />
+        <View
+            android:id="@+id/lineRec"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/profileRedLine"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/RecOptionIcon"
+            android:layout_alignParentStart="true" />
+
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/linear22"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:id="@+id/linear3">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Science"
+                android:id="@+id/scienceOption"
+                android:checked="true"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Educational"
+                android:id="@+id/EducationalOption"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NoKind"
+                android:id="@+id/noKindOption"
+                android:checked="true"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="6dp"
+                android:button="@drawable/checkbox"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear33"
+            android:layout_below="@+id/linear3">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/scienceOptionIcon"
+                android:src="@drawable/scienceicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/EducationalOptionIcon"
+                android:src="@drawable/meetupicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/noKindOptionIcon"
+                android:src="@drawable/movieicon"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/lineRatioo"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/profileRedLine"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_below="@+id/lineRatioo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-4dp">
+            <!--<TextView
+                android:text="Save Changes"
+                android:id="@+id/saveChangesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+
+                android:layout_marginRight="3dp"-->
+                 />
+            <TextView
+                android:text="Go To Map"
+                android:id="@+id/goToMap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="3dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_below="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:id="@+id/saveChanges"
+                android:src="@drawable/saveicon"
+                android:onClick=""
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>-->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/maps"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:onClick="gotoMaps"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/lineEnd"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/profileRedLine"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/linear5"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:id="@+id/login_button"
+            android:text="Logout"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:onClick="gotoLogin"
+            android:padding="6dp"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignTop="@+id/lineEnd"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+        <!--<Button
+            android:id="@+id/login_button"
+            android:text="Logout"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:onClick="gotoLogin"
+            android:background="@drawable/go_btn"
+            android:padding="6dp"
+
+            android:textSize="13dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/lineKinds" />-->
+        <!--<Button
+            android:id="@+id/login_button"
+            android:text="Logout"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:onClick="gotoLogin"
+            android:background="@drawable/go_btn"
+            android:padding="6dp"
+
+            android:textSize="13dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="301dp"
+            android:layout_below="@+id/MusicOption" />
+
+        <Button
+            android:text="Save Changes"
+            android:id="@+id/saveChanges"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/go_btn"
+            android:padding="6dp"
+            android:textSize="13dp"
+
+            android:layout_alignTop="@+id/login_button"
+            android:layout_toEndOf="@+id/SportsOption" />
+
+
+        <Button
+            android:text="Exit"
+            android:id="@+id/exit"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/go_btn"
+            android:padding="6dp"
+            android:textSize="13dp"
+            android:onClick="gotoMaps"
+            android:layout_below="@+id/login_button"
+            android:layout_alignEnd="@+id/recommendedBox" />-->
+
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:id="@+id/settingsPic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_toStartOf="@+id/recommendedBox" />
+
+    </RelativeLayout>
+</ScrollView>
+
