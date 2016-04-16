@@ -62,8 +62,8 @@ public class ServerRequest {
         pd.setCancelable(false);
         pd.setTitle("Proccesing");
         pd.setMessage("Please wait...");
-        texts = getCollectionn("mongodb://konira2:konira22@ds011439.mlab.com:11439/posts2", "texts2");
-        fb_users = getCollectionn("mongodb://konira3:konira33@ds011419.mlab.com:11419/app_users2", "fb_users2");
+        texts = getCollectionn("mongodb://...:....mlab.com:.../...", "...");
+        fb_users = getCollectionn("mongodb://...:....mlab.com:.../...", "...");
 
         /*
         String SERVER_ADDRESS = "http://irakmpek.webpages.auth.gr/android";
