@@ -1,0 +1,57 @@
+package com.example.irakl_000.maps.maps;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.ClusterItem;
+
+/**
+ * Created by Irakl_000 on 21/3/2016.
+ */
+public class ClusterItems implements ClusterItem, Parcelable {
+    private LatLng mPosition=null;
+    private String postID;
+
+    public ClusterItems(double lat, double lng, String postID) {
+        mPosition = new LatLng(lat, lng);
+        this.postID = postID;
+    }
+
+    @Override
+    public LatLng getPosition() {
+        return mPosition;
+    }
+    public String getID(){
+        return postID;
+    }
+
+
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(postID);
+        //dest.writeParcelable(mPosition, flags);
+    }
+
+    public static final Parcelable.Creator<ClusterItems> CREATOR
+            = new Parcelable.Creator<ClusterItems>() {
+        public ClusterItems createFromParcel(Parcel in) {
+            return new ClusterItems(in);
+        }
+
+        public ClusterItems[] newArray(int size) {
+            return new ClusterItems[size];
+        }
+    };
+
+    private ClusterItems(Parcel in) {
+        //mPosition = in.readParcelable(getClass().getClassLoader());
+        postID = in.readString();
+    }
+
+
+}
